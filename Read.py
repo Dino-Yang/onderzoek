@@ -12,7 +12,7 @@ try:
         writer.writerow(["x", "exec_time"])
         for x in range(0, 10000):
             n = random.randint(1, 100000)
-            query = f"SELECT dataset.id, dataset.pattern, dummyset.achternaam FROM dataset INNER JOIN dummyset ON dataset.id = dummyset.id WHERE dataset.id = {n}"
+            query = f"SELECT textielSet.id, textielSet.pattern, persoonSet.achternaam FROM textielSet INNER JOIN persoonSet ON textielSet.id = persoonSet.id WHERE textielSet.id = {n}"
             tic = time()
             cur.execute(query)
             toc = time()
