@@ -8,7 +8,7 @@ from time import sleep as wait
 try:
     conn = #connect to database
     cur = conn.cursor()
-    with open('#csv_name', 'w', newline='') as f1:
+    with open('csv_name', 'w', newline='') as f1:
         writer = csv.writer(f1)
         writer.writerow(["x", "exec_time"])
         for x in range(0, 10000):
