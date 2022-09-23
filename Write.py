@@ -12,7 +12,7 @@ try:
         writer = csv.writer(f1)
         writer.writerow(["x", "exec_time"])
         for x in range(0, 10000):
-            query1 = f"insert into textielSet (pattern,print,fabric,native_product_id,primary_colour) values ('a','b','b',{x},'b')"
+            query1 = f"insert into textielSet (pattern,print,fabric,native_product_id,primary_colour) values ('a','b','b',1,'b')"
             query2 = "DELETE FROM textielSet  WHERE ID=(SELECT MAX(id) FROM textielSet)"
             tic = time()
             cur.execute(query1)
